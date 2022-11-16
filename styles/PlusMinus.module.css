@@ -1,0 +1,31 @@
+.plus_minus_container {
+    width: 120px;
+    height: 48px;
+    display: flex;
+}
+
+.plus_minus_buttons {
+    border: none;
+    width: 40px;
+}
+
+.number_input { 
+    background-color: var(--clr-grey-primary);
+    border: none;
+    /* appearance: none; */
+    /* -webkit-appearance: textfield; */
+    width: 40px;
+    text-align: center;
+}
+
+.number_input:focus { 
+    outline: none;
+}
+
+.number_input::-webkit-outer-spin-button, .number_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    border: none;
+} 
+
+  
+  
