@@ -1,4 +1,4 @@
-import styles from '../../styles/PlusMinus.module.css'
+import styles from '../../styles/PlusMinus.module.scss'
 
 // import { useState } from 'react'
 

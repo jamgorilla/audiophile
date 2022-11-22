@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg'
 import PlusMinus from '../components/elements/PlusMinus'
+import RadioBtn from '../components/elements/RadioBtn'
 import { useState } from 'react'
 
 
@@ -56,12 +57,9 @@ export default function Home() {
       <label className="text-btn-label" htmlFor="test">Name</label>
       <input type='text' id="test" placeholder='Insert your name' />
 
-      <label className="radio-btn-label" htmlFor="radio-test">
-      <input type="radio" id="radio-test" name="radio-btn" value="money"/>
-          e-Money
-      </label>
 
-      
+
+      <RadioBtn innerHTML="e-Money" />
 
       <PlusMinus stepper={ stepper } defaultValue={ numvalue }/>
 

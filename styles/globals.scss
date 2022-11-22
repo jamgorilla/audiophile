@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+// screen widths
+  $max-mobile-width: 765px;
+  $min-tablet-width: 765px;
+  $max-tablet-width: 1200px;
+  $min-desktop-width: 1200px;
+
 html,
 body {
   padding: 0;
@@ -22,9 +28,13 @@ body {
   --clr-black-pure: #000000; /* rgb(0, 0, 0), hsl(0, 0%, 0%) */
 
   --clr-btn-default-grey: #CFCFCF;
+  
 
+  /* overflow: hidden; */
 
 }
+
+
 
 a {
   color: inherit;
@@ -64,7 +74,13 @@ h6 {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1.3px;
+  @media screen and (max-width: $max-tablet-width) {
+    font-size: 15px;
+    
+  }
 }
+
+
 p {
   font-weight: 500;
   font-size: 15px;
@@ -157,74 +173,11 @@ input[type="text"]:focus, [type="radio"]:focus {
   border: 1px solid var(--clr-tan-primary);
 }
 
-/* not sure If I need this */
-/* .text-btn-label {
-  display: block;
-  text-align: left;
-  width: 100%;
-} */
-
-.radio-btn-label {
-  display: flex;
-  align-items: center;
-  width: 309px;
-  height: 56px;
-  border: 1px solid var(--clr-btn-default-grey);
-  border-radius: 8px;
-  padding-left: 1rem;
-}
-
-.radio-btn-label:hover {
-  border: 1px solid var(--clr-tan-primary);
-  cursor: pointer;
-}
-
-input[type="radio"] {
-  appearance: none;
-  border-color: var(--clr-btn-default-grey); 
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 4px;
-  margin-right: .8rem;
-  cursor: pointer;
-
-}
-input[type="radio"]:checked {
-  background-image: linear-gradient(to bottom, rgba(216, 125, 74, 1) 0%, rgba(216, 125, 74, 1) 100%), linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background-clip: content-box, padding-box;
-}
 
 
 
 
 
-.plus-minus-container {
-  /* position: absolute; */
-  transform: (-50%, -50%);
-  top: 50%;
-  left: 50%;
-  display: flex;
-}
-.plus-minus-buttons {
-  border: none;
-}
 
-input[type="number"] { 
-  background-color: var(--clr-grey-primary);
-  border: none;
-  /* appearance: none; */
-  -webkit-appearance: textfield;
-  /* width: 20px;
-  height: 20px; */
 
-}
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
- -webkit-appearance: none;
- border: none;
-
-} 
-/* input[type="number"]::-webkit-inner-spin-button {
-  
-}  */
 
