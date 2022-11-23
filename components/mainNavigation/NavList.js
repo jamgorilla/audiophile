@@ -14,13 +14,13 @@ function NavList() {
                         />
                     <NavItem 
                         title="Speakers" 
-                        src="/../public/assets/shared/desktop/image-category-thumbnail-speakers.png"
+                        src="/assets/shared/desktop/image-category-thumbnail-speakers.png"
                         alt="Speakers"
                         pageLink="/speakers"
                         />
                     <NavItem 
                         title="Earphones" 
-                        src="/../public/assets/shared/desktop/image-category-thumbnail-earphones.png"
+                        src="/public/assets/shared/desktop/image-category-thumbnail-earphones.png"
                         alt="Earphones"
                         pageLink="/earphones"
                         />    
