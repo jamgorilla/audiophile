@@ -8,7 +8,7 @@ function NavList() {
                 <ul className={ styles.menu_container }>
                     <NavItem 
                         title="Headphones" 
-                        src="/../public/assets/shared/desktop/image-category-thumbnail-headphones.png"
+                        src="/assets/shared/desktop/image-category-thumbnail-headphones.png"
                         alt="Headphones"
                         pageLink="/headphones"
                         />
@@ -20,7 +20,7 @@ function NavList() {
                         />
                     <NavItem 
                         title="Earphones" 
-                        src="/public/assets/shared/desktop/image-category-thumbnail-earphones.png"
+                        src="/assets/shared/desktop/image-category-thumbnail-earphones.png"
                         alt="Earphones"
                         pageLink="/earphones"
                         />    

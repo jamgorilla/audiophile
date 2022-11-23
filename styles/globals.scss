@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import './_variables.scss';
 
 * {
   box-sizing: border-box;
 }
-
-// screen widths
-  $max-mobile-width: 765px;
-  $min-tablet-width: 765px;
-  $max-tablet-width: 1200px;
-  $min-desktop-width: 1200px;
 
 html,
 body {
@@ -74,7 +69,7 @@ h6 {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1.3px;
-  @media screen and (max-width: $max-tablet-width) {
+  @media screen and (max-width: $desktop-breakpoint-width) {
     font-size: 15px;
     
   }
