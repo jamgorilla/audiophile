@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg'
+import heroImage from '../public/assets/home/desktop/image-hero.jpg'
+import heroImageTablet from '../public/assets/home/tablet/image-header.jpg'
 import PlusMinus from '../components/elements/PlusMinus'
 import RadioBtn from '../components/elements/RadioBtn'
 import { useState } from 'react'
@@ -14,7 +16,7 @@ export default function Home() {
 
   function stepper(e) {
     const change = e.target.innerHTML;
-    console.log(e.target.innerHTML)
+
     const max = 5;
     const min = 1;
     
@@ -36,6 +38,31 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
+        <div className={ styles.hero_section }>
+            <Image 
+              src={ heroImage }
+              className={ styles.desktop_hero_image }
+              alt="hero-image-earphones"
+              quality={100}
+              layout="responsive"
+            />
+            <Image 
+              src={ heroImageTablet}
+              className={ styles.tablet_hero_image }
+              alt="hero-image-earphones"
+              quality={100}
+              layout="responsive"
+            />
+
+          <div className={ styles.hero_text_container }>
+              <p className={`overline ${ styles.hero_title_overline }`}>New Product</p>
+              <h1>XX99 Mark II Headphones</h1>
+              <p className={ styles.hero_paragraph }>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+              <button className={`btn-type-1 ${ styles.hero_see_product_button }`}>See product</button>
+          </div>
+        </div>
+
         
         <h1>Homepage</h1>
         <h2>Homepage</h2>
@@ -44,7 +71,7 @@ export default function Home() {
         <h5>Homepage</h5>
         <h6>Homepage</h6>
         <p className='overline'>Homepage</p>
-        <p className='sub-title'>Homepage</p>
+        <p className='sub-title'>Homedsdspage</p>
         <p>Homepage</p>
         <button className='btn-type-1'>See product</button>
         <button className='btn-type-2'>See product</button>

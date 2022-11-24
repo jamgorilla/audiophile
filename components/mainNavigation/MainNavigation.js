@@ -13,8 +13,6 @@ import { useState, useEffect } from 'react'
 
 function MainNavigation(props) {
 
-    console.log("propsfrommain", navListData )
-
 
     const [open, setOpen] = useState(false);
 

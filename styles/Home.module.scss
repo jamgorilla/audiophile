@@ -1,5 +1,64 @@
+@import './_variables.scss';
 
 
+.hero_section {
+    // background-image: url("../public/assets/home/tablet/image-header.jpg");
+    position: relative;
+    background-color: black;
+
+    // desktop
+    @media screen and (min-width: $desktop-breakpoint-width) {
+        & .desktop_hero_image {
+            opacity: .9;
+            display: block;
+        }
+        & .tablet_hero_image {
+            display: none;
+        }
+    }
+    // tablet
+    @media screen and (max-width: $desktop-breakpoint-width) and (min-width: $mobile-breakpoint-width) {
+        & .desktop_hero_image {
+            opacity: .9;
+            display: none;
+        }
+        & .tablet_hero_image {
+            display: block;
+        }
+    }
+    // mobile
+    @media screen and (max-width: $mobile-breakpoint-width) {
+        & .desktop_hero_image {
+            opacity: .9;
+            display: none;
+        }
+        & .tablet_hero_image {
+            display: block;
+        }
+    }
+
+}
+
+.hero_text_container {
+    position: absolute;
+    top: 25%;
+    margin-left: var(--standar-margin);
+    color: var(--clr-white-pure);
+    max-width: 35rem;
+    
+    & .hero_title_overline {
+        color: var(--clr-btn-default-grey);
+        font-weight: 200;
+    }
+    & .hero_paragraph {
+        max-width: 23rem;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    & .hero_see_product_button {
+        margin-top: 2rem;
+    }
+}
 
 // .main {
 //   min-height: 100vh;
