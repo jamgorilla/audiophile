@@ -5,6 +5,7 @@ import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg'
 import PlusMinus from '../components/elements/PlusMinus'
 import RadioBtn from '../components/elements/RadioBtn'
 import { useState } from 'react'
+import MainNavigation from '../components/mainNavigation/MainNavigation'
 
 
 export default function Home() {

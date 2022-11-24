@@ -1,21 +1,87 @@
 @import './_variables.scss';
 
+
 .main_navigation {
     background-color: var(--clr-black-pure);
     color: var(--clr-white-pure);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 16px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 16px;
-  
+    .explicit_nav_list {
+        display: none;
+    }
+
+    // mobile 
+    @media screen and (max-width: $mobile-breakpoint-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // tablet 
+    @media screen and (max-width: $desktop-breakpoint-width) and (min-width: $mobile-breakpoint-width) {
+        display: flex;
+        align-items: center;
+        .logo_container {
+            width: 100%;
+            margin-left: 24px;
+        }
+    }
+    // desktop +
+    @media screen and (min-width: $desktop-breakpoint-width) {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr;
+
+        .logo_container {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: 1;
+            align-self: center;
+        }
+        .cart_container {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row: 1;
+            align-self: center;
+            // justify-content: end;
+            justify-self: end;
+        }
+        .hamburger_container {
+            display: none;
+        }
+        .explicit_nav_list {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row: 1;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 12rem;
+            margin-right: 12rem;
+
+            & li h6 {
+                letter-spacing: 0px;
+                line-height: 0px;
+                margin-top: .8rem;
+                margin-bottom: 0rem;
+                align-self: center;
+                font-size: 10px;
+                
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--clr-tan-primary);
+                }
+            }
+        }
+    }
 }
 
 
 .menu_container {
     position: absolute;
+    z-index: 20;
     background-color: var(--clr-white-pure);
     margin-top: 62px;
     top: 0;

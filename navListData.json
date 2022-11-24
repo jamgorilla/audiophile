@@ -1,0 +1,21 @@
+[    
+    {
+      "id": "1",
+      "title": "Headphones",
+      "src":"/assets/shared/desktop/image-category-thumbnail-headphones.png",
+      "alt":"Headphones",
+      "pageLink":"/headphones"
+    },{
+      "id":"2", 
+      "title": "Speakers",
+      "src":"/assets/shared/desktop/image-category-thumbnail-speakers.png",
+      "alt":"Speakers",
+      "pageLink":"/speakers"
+    },{
+      "id":"3", 
+      "title": "Earphones",
+      "src":"/assets/shared/desktop/image-category-thumbnail-earphones.png",
+      "alt":"Earphones",
+      "pageLink":"/earphones"
+    }
+  ]

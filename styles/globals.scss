@@ -24,12 +24,22 @@ body {
 
   --clr-btn-default-grey: #CFCFCF;
   
-
   /* overflow: hidden; */
-
 }
 
-
+body.open:before {
+  content:'';
+  position: fixed;
+  background-color: var(--clr-black-pure);
+  opacity: 0.4;
+  top: 62px;
+  right: 0;
+  left: 0;
+  border-radius: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
 
 a {
   color: inherit;
