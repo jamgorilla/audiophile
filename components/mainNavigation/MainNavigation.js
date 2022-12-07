@@ -35,7 +35,7 @@ function MainNavigation(props) {
                         alt="hamburger-menu"
                     />
 
-                {open && <NavList navigationArray={ navListData }/>}
+                {open && <div className={ styles.fixed_nav_container } ><NavList navigationArray={ navListData }/></div> }
 
             </div>
 

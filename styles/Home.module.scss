@@ -42,10 +42,11 @@
 .hero_text_container {
     position: absolute;
     top: 25%;
-    margin-left: var(--standar-margin);
+    margin-left: var(--standard-margin);
     color: var(--clr-white-pure);
-    max-width: 35rem;
-    
+    width: 35rem;
+    // margin: 0 auto;
+
     & .hero_title_overline {
         color: var(--clr-btn-default-grey);
         font-weight: 200;
@@ -58,130 +59,182 @@
     & .hero_see_product_button {
         margin-top: 2rem;
     }
+
+    // tablet and below
+    @media screen and (max-width: $desktop-breakpoint-width)  {
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        & .hero_paragraph {
+            max-width: 100%;
+            margin-left: 6rem;
+            margin-right: 6rem;
+
+        }
+    }
 }
 
-// .main {
-//   min-height: 100vh;
-//   padding: 4rem 0;
-//   flex: 1;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
+// ZX9
 
-// .footer {
-//   display: flex;
-//   flex: 1;
-//   padding: 2rem 0;
-//   border-top: 1px solid #eaeaea;
-//   justify-content: center;
-//   align-items: center;
-// }
+.advertisment_zx9_speaker {
+    margin-left: var(--standard-margin);
+    margin-right: var(--standard-margin);
+    margin-bottom: 3rem;
+    background-color: var(--clr-tan-primary);
+    border-radius: var(--standard-border-radius);
+    position: relative;
+    height: 28rem;
+    background-image: url('../public/assets/home/desktop/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position-x: -5%;
+    background-position-y: -10%;
+    background-size: 50%;
 
-// .footer a {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-grow: 1;
-// }
+   & .zx9_speaker_image_container {
+    position: absolute;
+    width: 300px;
+    bottom: 0rem;
+    left: 10%;
+    overflow: hidden;
+    & img {
+        margin-bottom: -1rem;
+    }
+   }
+   & .zx9_speaker_text {
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 50%;
+    right: 6rem;
+    & .zx9_see_product_button {
+        background-color: var(--clr-black-pure);
+        margin-top: 2rem;
+        &:hover {
+            background-color: var(--clr-btn-darker-grey);
+        }
+    }
+   }
+   @media screen and (max-width: $desktop-breakpoint-width)  {
+        position:static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        background-position: center top;
+        & .zx9_speaker_image_container {
+            position: static;
+            width: 150px;
+            overflow: visible;
+           }
+           & .zx9_speaker_text {
+            position: static;
+            text-align: center;
+            & .zx9_speaker_paragraph {
+                width: 370px;
+                margin: 0 auto;
+            }
+           }
+   }
+   @media screen and (max-width: $mobile-breakpoint-width)  { 
+        margin-top: 3rem;
+   }
+}
 
-// .title a {
-//   color: #0070f3;
-//   text-decoration: none;
-// }
+// zx7
+.advertisment_zx7_speaker {
+    position: relative;
+    
+    margin-left: var(--standard-margin);
+    margin-right: var(--standard-margin);
+    border-radius: var(--standard-border-radius);
+    overflow: hidden;
+    & .zx7_speaker_image_container {
+        margin-bottom: -1rem;
+        @media screen and (min-width: $desktop-breakpoint-width)  { 
+            & .zx7SpeakerD {
+                display: block;
+            }
+            & .zx7SpeakerT {
+                display: none;
+            }
+            & .zx7SpeakerM {
+                display: none;
+            }
+        }
+        @media screen and (min-width: $mobile-breakpoint-width) and (max-width: $desktop-breakpoint-width)  { 
+            & .zx7SpeakerD {
+                display: none;
+            }
+            & .zx7SpeakerT {
+                display: block;
+            }
+            & .zx7SpeakerM {
+                display: none;
+            }
+        }
+        @media screen and (max-width: $mobile-breakpoint-width)  { 
+            & .zx7SpeakerD {
+                display: none;
+            }
+            & .zx7SpeakerT {
+                display: none;
+            }
+            & .zx7SpeakerM {
+                display: block;
+            }
+        }
+    }
+    & .zx7_speaker_text {
+        position: absolute;
+        top: 30%;
+        left: 6rem;
 
-// .title a:hover,
-// .title a:focus,
-// .title a:active {
-//   text-decoration: underline;
-// }
+    }
+}
 
-// .title {
-//   margin: 0;
-//   line-height: 1.15;
-//   font-size: 4rem;
-// }
+// YX1 Earphones
+.earphone_container_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-left: var(--standard-margin);
+    margin-right: var(--standard-margin);
+    padding-top: 3rem;
 
-// .title,
-// .description {
-//   text-align: center;
-// }
+    & .earphones_yx1_image, .earphone_title_n_button {
+        border-radius: var(--standard-border-radius);
 
-// .description {
-//   margin: 4rem 0;
-//   line-height: 1.5;
-//   font-size: 1.5rem;
-// }
+    }
+    & .earphone_title_n_button {
+        background-color: var(--clr-btn-default-grey);
+        padding-left: 3rem;
+        padding-top: 3rem;
 
-// .code {
-//   background: #fafafa;
-//   border-radius: 5px;
-//   padding: 0.75rem;
-//   font-size: 1.1rem;
-//   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-//     Bitstream Vera Sans Mono, Courier New, monospace;
-// }
+    }
+}
 
-// .grid {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   max-width: 800px;
-// }
+// audio gear
+.audio_gear_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-left: var(--standard-margin);
+    margin-right: var(--standard-margin);
+    padding-top: 3rem;
 
-// .card {
-//   margin: 1rem;
-//   padding: 1.5rem;
-//   text-align: left;
-//   color: inherit;
-//   text-decoration: none;
-//   border: 1px solid #eaeaea;
-//   border-radius: 10px;
-//   transition: color 0.15s ease, border-color 0.15s ease;
-//   max-width: 300px;
-// }
+    & .audio_gear_text {
+        padding-top: 5rem;
+        padding-right: 3rem;
+        & span {
+            color: var(--clr-tan-primary);
+        }
+    }
 
-// .card:hover,
-// .card:focus,
-// .card:active {
-//   color: #0070f3;
-//   border-color: #0070f3;
-// }
-
-// .card h2 {
-//   margin: 0 0 1rem 0;
-//   font-size: 1.5rem;
-// }
-
-// .card p {
-//   margin: 0;
-//   font-size: 1.25rem;
-//   line-height: 1.5;
-// }
-
-// .logo {
-//   height: 1em;
-//   margin-left: 0.5rem;
-// }
-
-// @media (max-width: 600px) {
-//   .grid {
-//     width: 100%;
-//     flex-direction: column;
-//   }
-// }
-
-// @media (prefers-color-scheme: dark) {
-//   .card,
-//   .footer {
-//     border-color: #222;
-//   }
-//   .code {
-//     background: #111;
-//   }
-//   .logo img {
-//     filter: invert(1);
-//   }
-// } */
+    & .audio_gear_image {
+        border-radius: var(--standard-border-radius);
+    }
+}

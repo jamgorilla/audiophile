@@ -23,9 +23,14 @@ body {
   --clr-black-pure: #000000; /* rgb(0, 0, 0), hsl(0, 0%, 0%) */
 
   --clr-btn-default-grey: #CFCFCF;
+  --clr-btn-darker-grey: #4C4C4C;
 
 
-  --standar-margin: 6rem;
+  //margin
+  --standard-margin: 6rem;
+
+  //standard border radius
+  --standard-border-radius: 8px;
   
   /* overflow: hidden; */
 }

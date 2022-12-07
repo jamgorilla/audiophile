@@ -33,8 +33,8 @@
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 1fr;
 
-        padding-left: var(--standar-margin);
-        padding-right: var(--standar-margin);
+        padding-left: var(--standard-margin);
+        padding-right: var(--standard-margin);
 
 
         .logo_container {
@@ -82,19 +82,40 @@
     }
 }
 
+//this one refers to the list in the main navigation
+.fixed_nav_container {
+    .menu_container {
+        position: absolute;
+        z-index: 20;
+        background-color: var(--clr-white-pure);
+        margin-top: 62px;
+        top: 0;
+        left: 0; 
+        right: 0;
+        padding-left: var(--standard-margin);
+        opacity: 1;
+        list-style: none;
+        @media screen and (max-width: $desktop-breakpoint-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            padding-bottom: 3rem;
+        }
+        @media screen and (max-width: $mobile-breakpoint-width) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
 
+// this one refers to the list in the body as opposed to the navigation
 .menu_container {
-    position: absolute;
-    z-index: 20;
-    background-color: var(--clr-white-pure);
-    margin-top: 62px;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-left: 0rem;
-    opacity: 1;
-    list-style: none;
-    @media screen and (max-width: $desktop-breakpoint-width) {
+        padding-left: var(--standard-margin);
+        padding-right: var(--standard-margin);
+        gap: 4rem;
+    @media screen and (min-width: $mobile-breakpoint-width) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -108,12 +129,11 @@
     }
 }
 
+    
 .main_nav_list {
     /* width: 100%; */
     position: relative;
     margin-top: 4rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
     margin-bottom: 0rem;
     height: 165px;
     display: flex;
@@ -121,10 +141,10 @@
     justify-content: center;
     align-items: center;
     background-color: var(--clr-grey-primary);
-    border-radius: 8px;
+    border-radius: var(--standard-border-radius);
     @media screen and (max-width: $mobile-breakpoint-width) {
         width: 100%;
-        max-width: 300px;
+        // max-width: 300px;
     }
 }
 .product_image_container {
