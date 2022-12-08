@@ -6,8 +6,6 @@ import arrowRight from './../../public/assets/shared/desktop/icon-arrow-right.sv
 
 function NavItem(props) {
 
-    console.log( props.pageLink )
-
     
     return (
             

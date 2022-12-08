@@ -5,10 +5,7 @@ import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg'
 import heroImage from '../public/assets/home/desktop/image-hero.jpg'
 import heroImageTablet from '../public/assets/home/tablet/image-header.jpg'
 import zx9Speaker from '../public/assets/home/desktop/image-speaker-zx9.png'
-import zx7SpeakerD from '../public/assets/home/desktop/image-speaker-zx7.jpg'
-import zx7SpeakerT from '../public/assets/home/tablet/image-speaker-zx7.jpg'
-import zx7SpeakerM from '../public/assets/home/mobile/image-speaker-zx7.jpg'
-import earphones_yx1 from '../public/assets/home/desktop/image-earphones-yx1.jpg'
+// import earphones_yx1 from '../public/assets/home/desktop/image-earphones-yx1.jpg'
 import best_gear from '../public/assets/shared/desktop/image-best-gear.jpg'
 
 import PlusMinus from '../components/elements/PlusMinus'
@@ -94,35 +91,6 @@ export default function Home() {
         </div>
 
         <div className={ styles.advertisment_zx7_speaker }>
-          <div className={ styles.zx7_speaker_image_container}>
-            <Image 
-                src={ zx7SpeakerD }
-                className={ styles.zx7SpeakerD }
-                alt="zx7-speakerD"
-                quality={100}
-                width={756}
-                height={918}
-                layout="responsive"
-                />
-            <Image 
-                src={ zx7SpeakerT }
-                className={ styles.zx7SpeakerT }
-                alt="zx7-speakerT"
-                quality={100}
-                width={756}
-                height={918}
-                layout="responsive"
-                />
-            <Image 
-                src={ zx7SpeakerM }
-                className={ styles.zx7SpeakerM }
-                alt="zx7-speakerM"
-                quality={100}
-                width={756}
-                height={918}
-                layout="responsive"
-                />
-          </div>
           <div className={ styles.zx7_speaker_text}>
               <h2>ZX7 Speaker</h2>
               <button className={`btn-type-2 ${ styles.zx7_see_product_button }`}>See product</button>
@@ -130,15 +98,7 @@ export default function Home() {
         </div>
 
         <div className={ styles.earphone_container_grid }>
-              <Image 
-                src={ earphones_yx1 }
-                className={ styles.earphones_yx1_image }
-                alt="earphones_yx1_image"
-                quality={100}
-                width={756}
-                height={918}
-                layout="responsive"
-                />
+              <div className={ styles.earphone_background_image_container }></div>
               <div className={ styles.earphone_title_n_button }>
                 <h2>YX1 Earphones</h2>
                 <button className={`btn-type-2 ${ styles.yx1_see_product_button }`}>See product</button>
@@ -147,22 +107,15 @@ export default function Home() {
 
         <div className={ styles.audio_gear_grid }>
               <div className={ styles.audio_gear_text }>
-                <h2>Bring your <span>best</span> audio gear</h2>
+                <h1>Bringing you the <span>best</span> audio gear</h1>
                 <p>Located at the heart of New York City, Audiophile is the premier store for high end headphones, 
                     earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration 
                     rooms available for you to browse and experience a wide range of our products. Stop by our store 
                     to meet some of the fantastic people who make Audiophile the best place to buy your portable 
                     audio equipment.</p>
               </div>
-              <Image 
-                src={ best_gear }
-                className={ styles.audio_gear_image }
-                alt="best_gear_image"
-                quality={100}
-                width={756}
-                height={918}
-                layout="responsive"
-                />
+              <div className={ styles.best_gear_background_container}>
+              </div>
         </div>
         
         <h1>Homepage</h1>
