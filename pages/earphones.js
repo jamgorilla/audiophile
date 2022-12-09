@@ -1,12 +1,14 @@
+import ProductList from '../components/headphones/ProductList'
+import data from '../data.json'
 
 
-function Earphones() {
-    
+function Headphones() {
+
     return (
                 <div>
-                    <h1>Earphones</h1>
+                    <ProductList data={ data } productCode={ 3 }/>
                 </div>
     )
 }
 
-export default Earphones;
+export default Headphones;

@@ -4,7 +4,7 @@ import cart from '../../public/assets/shared/desktop/icon-cart.svg'
 import logo from '../../public/assets/shared/desktop/logo.svg'
 import hamburger from '../../public/assets/shared/tablet/icon-hamburger.svg'
 import styles from '../../styles/MainNavigation.module.scss'
-import Link from 'next/link.js'
+import Link from 'next/link'
 import NavList from './NavList'
 
 import navListData from '../../navListData.json'
