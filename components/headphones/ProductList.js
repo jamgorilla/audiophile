@@ -4,7 +4,7 @@ import ProductItem from './ProductItem'
 
 function ProductList(props) {
 
-    console.log("PROO", props.productCode )
+    //console.log("PROO", props.productCode )
 
 
     

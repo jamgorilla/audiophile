@@ -12,7 +12,7 @@ function IndividualProductPage(props) {
 
     const productid = router.query.productid;
 
-    console.log( "IS OBJECT DEFINED", productid, props )
+    //console.log( "IS OBJECT DEFINED", productid, props )
 
     let src = props.products.image.desktop;
 
@@ -643,7 +643,7 @@ export async function getStaticProps(context) {
   
   return {
       props: {
-        products: productArrayOfObjects[productid],
+        products: productArrayOfObjects[productid-1],
         productsfull: productArrayOfObjects
       }
     }
