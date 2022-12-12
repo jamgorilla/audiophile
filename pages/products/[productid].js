@@ -12,7 +12,7 @@ function IndividualProductPage(props) {
 
     const productid = router.query.productid;
 
-    console.log( "IS OBJECT DEFINED", productid, data[productid] )
+    console.log( "IS OBJECT DEFINED", productid, props )
 
     let src = data[productid].image.desktop;
 
@@ -22,7 +22,7 @@ function IndividualProductPage(props) {
 
     //Stepper
 
-    console.log( router )
+    //console.log( router )
 
     const [numvalue, setNumvalue] = useState(1);
 
