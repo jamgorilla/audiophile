@@ -12,6 +12,8 @@ function IndividualProductPage(props) {
 
     const productid = router.query.productid;
 
+    console.log( "IS OBJECT DEFINED", productid, data[productid] )
+
     let src = data[productid].image.desktop;
 
     const slicedSRC = src.slice(1, src.length )
