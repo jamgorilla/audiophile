@@ -40,3 +40,5 @@ next-env.d.ts
 *.xd
 *.sketch
 *.fig
+
+yarn.lock
