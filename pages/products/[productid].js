@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import ProductDetail from '../../components/products/ProductDetail';
-import data from '../../data.json'
+// import data from '../../data.json'
 import Image from 'next/image';
 import styles from '../../styles/ProductDetail.module.scss'
 import { useState } from 'react'
@@ -14,7 +14,7 @@ function IndividualProductPage(props) {
 
     console.log( "IS OBJECT DEFINED", productid, props )
 
-    let src = data[productid].image.desktop;
+    let src = props.products.image.desktop;
 
     const slicedSRC = src.slice(1, src.length )
 
@@ -54,10 +54,10 @@ function IndividualProductPage(props) {
                 />
             {/* <h1 className={ styles.product_detail_id }>{ productid }</h1> */}
             
-            <p className={ 'overline ' + styles.product_detail_new_product }>{ data[productid].new && "New Product" }</p>
-            <h2 className={ styles.product_detail_name }>{ data[productid].name }</h2>
-            <p className={ styles.product_detail_description }>{ data[productid].description }</p>
-            <p className={ styles.product_detail_price }>{ "$" + data[productid].price }</p>
+            <p className={ 'overline ' + styles.product_detail_new_product }>{ props.products.new && "New Product" }</p>
+            <h2 className={ styles.product_detail_name }>{ props.products.name }</h2>
+            <p className={ styles.product_detail_description }>{ props.products.description }</p>
+            <p className={ styles.product_detail_price }>{ "$" + props.products.price }</p>
             <div className={ styles.product_detail_stepper_button_container }>
                 <PlusMinus stepper={ stepper } defaultValue={ numvalue } value={ numvalue }/>
                 <button className='btn-type-1'>Add to Cart</button>
@@ -643,7 +643,7 @@ export async function getStaticProps(context) {
   
   return {
       props: {
-        products: productArrayOfObjects[productid-1],
+        products: productArrayOfObjects[productid],
         productsfull: productArrayOfObjects
       }
     }
