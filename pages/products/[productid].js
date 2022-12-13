@@ -12,18 +12,12 @@ function IndividualProductPage(props) {
 
     const productid = router.query.productid;
 
-    //console.log( "IS OBJECT DEFINED", productid, props )
-
     let src = props.products.image.desktop;
 
     const slicedSRC = src.slice(1, src.length )
 
-    // console.log(slicedSRC)
 
     //Stepper
-
-    //console.log( router )
-
     const [numvalue, setNumvalue] = useState(1);
 
     function stepper(e) {

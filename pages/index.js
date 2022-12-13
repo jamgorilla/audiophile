@@ -7,6 +7,7 @@ import heroImageTablet from '../public/assets/home/tablet/image-header.jpg'
 import zx9Speaker from '../public/assets/home/desktop/image-speaker-zx9.png'
 // import earphones_yx1 from '../public/assets/home/desktop/image-earphones-yx1.jpg'
 import best_gear from '../public/assets/shared/desktop/image-best-gear.jpg'
+import Link from 'next/link'
 
 import PlusMinus from '../components/elements/PlusMinus'
 import RadioBtn from '../components/elements/RadioBtn'
@@ -64,7 +65,9 @@ export default function Home() {
               <p className={`overline ${ styles.hero_title_overline }`}>New Product</p>
               <h1>XX99 Mark II Headphones</h1>
               <p className={ styles.hero_paragraph }>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+              <Link href={'/products/4'}>
               <button className={`btn-type-1 ${ styles.hero_see_product_button }`}>See product</button>
+              </Link>
           </div>
         </div>
 
@@ -86,14 +89,18 @@ export default function Home() {
           <div className={ styles.zx9_speaker_text}>
               <h1>ZX9 Speaker</h1>
               <p className={ styles.zx9_speaker_paragraph }>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
-              <button className={`btn-type-1 ${ styles.zx9_see_product_button }`}>See product</button>
+              <Link href={'/products/6'}>
+                <button className={`btn-type-1 ${ styles.zx9_see_product_button }`}>See product</button>
+              </Link>
           </div>
         </div>
 
         <div className={ styles.advertisment_zx7_speaker }>
           <div className={ styles.zx7_speaker_text}>
               <h2>ZX7 Speaker</h2>
+              <Link href={'/products/5'}>
               <button className={`btn-type-2 ${ styles.zx7_see_product_button }`}>See product</button>
+              </Link>
           </div>
         </div>
 
@@ -101,7 +108,9 @@ export default function Home() {
               <div className={ styles.earphone_background_image_container }></div>
               <div className={ styles.earphone_title_n_button }>
                 <h2>YX1 Earphones</h2>
+              <Link href={'/products/1'}>
                 <button className={`btn-type-2 ${ styles.yx1_see_product_button }`}>See product</button>
+              </Link>
               </div>
         </div>
 

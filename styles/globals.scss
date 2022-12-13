@@ -26,8 +26,20 @@ body {
   --clr-btn-darker-grey: #4C4C4C;
 
 
-  //margin
-  --standard-margin: 6rem;
+  // desktop
+  @media screen and (min-width: $desktop-breakpoint-width) {
+      //margin
+      --standard-margin: 30rem;
+  }
+  // tablet
+  @media screen and (max-width: 2045px) and (min-width: 1400px) {
+      --standard-margin: 10rem;
+  }
+  // mobile
+  @media screen and (max-width: 1400px) {
+    --standard-margin: 6rem;
+
+  }
 
   //standard border radius
   --standard-border-radius: 8px;
@@ -79,7 +91,7 @@ h4 {
   letter-spacing: 2px;
 }
 h5 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 33px;
   letter-spacing: 1.7px;
 }
@@ -95,9 +107,9 @@ h6 {
 
 
 p {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 30px;
 }
 .overline {
   color: var(--clr-tan-primary);

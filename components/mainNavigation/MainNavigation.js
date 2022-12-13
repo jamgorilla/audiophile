@@ -40,10 +40,10 @@ function MainNavigation(props) {
             </div>
 
             <div className={ styles.explicit_nav_list }>
-                <li key="0"><h6><Link href="/">Home</Link></h6></li>
+                <li key="0"><h5><Link href="/">Home</Link></h5></li>
                 
                { navListData.map((element) => (
-                    <li key={element.id}><h6><Link href={ element.pageLink }>{element.title}</Link></h6></li>
+                    <li key={element.id}><h5><Link href={ element.pageLink }>{element.title}</Link></h5></li>
                 ))}
             </div>
 
