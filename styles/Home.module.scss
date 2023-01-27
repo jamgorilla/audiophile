@@ -144,7 +144,7 @@
 }
 
 //same for all jpg images
-.advertisment_zx7_speaker, .earphone_background_image_container, .best_gear_background_container {
+.advertisment_zx7_speaker, .earphone_background_image_container {
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -219,51 +219,3 @@
     }
 }
 
-// audio gear
-.audio_gear_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-left: var(--standard-margin);
-    margin-right: var(--standard-margin);
-    padding-top: 3rem;
-    @media screen and (max-width: $desktop-breakpoint-width)  { 
-        grid-template-columns: 1fr;
-    }
-
-    & .audio_gear_text {
-        display: flex;
-        flex-direction: column;
-        // padding-top: 5rem;
-        justify-content: center;
-        padding-right: 8rem;
-        & span {
-            color: var(--clr-tan-primary);
-        }
-        @media screen and (max-width: $desktop-breakpoint-width)  { 
-            text-align: center;
-            padding-right: 0rem;
-        }
-    }
-
-    & .best_gear_background_container {
-        border-radius: var(--standard-border-radius);
-        background-image: url('../public/assets/shared/desktop/image-best-gear.jpg');
-        background-position: center;
-        height: 56rem;
-
-        @media screen and (min-width: $desktop-breakpoint-width)  { 
-            background-image: url('../public/assets/shared/desktop/image-best-gear.jpg');
-        }
-        @media screen and (min-width: $mobile-breakpoint-width) and (max-width: $desktop-breakpoint-width)  { 
-            grid-row: 1/2;
-            height: 28rem;
-            background-image: url('../public/assets/shared/tablet/image-best-gear.jpg');
-        }
-        @media screen and (max-width: $mobile-breakpoint-width)  { 
-            grid-row: 1/2;
-            height: 28rem;
-            background-image: url('../public/assets/shared/mobile/image-best-gear.jpg');
-        }
-    }
-}

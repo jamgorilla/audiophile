@@ -41,16 +41,16 @@ function MainNavigation(props) {
 
       <div className={styles.explicit_nav_list}>
         <li key="0">
-          <h5>
+          <h6>
             <Link href="/">Home</Link>
-          </h5>
+          </h6>
         </li>
 
         {navListData.map((element) => (
           <li key={element.id}>
-            <h5>
+            <h6>
               <Link href={element.pageLink}>{element.title}</Link>
-            </h5>
+            </h6>
           </li>
         ))}
       </div>
