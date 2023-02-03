@@ -50,6 +50,7 @@
             align-self: center;
             // justify-content: end;
             justify-self: end;
+            cursor: pointer;
         }
         .hamburger_container {
             display: none;
@@ -178,3 +179,41 @@
 
 
 
+.cart_dropdown_card {
+    background-color: var(--clr-white-pure);
+    padding: 2rem;
+    // margin: 0;
+    position: absolute;
+    top: 10rem;
+    right: var(--standard-margin);
+    z-index: 20;
+    border-radius: var(--standard-border-radius);
+    min-width: 578.4px;
+    & .cart_heading_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .remove_btn {
+            cursor: pointer;
+        }
+    }
+}
+.cart_item_ul {
+    list-style: none;
+    list-style-type: none;
+    padding-left: 0rem;
+}
+.cart_total_price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.checkout_btn {
+    width: 100%;
+    height: 4rem;
+    & h5 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

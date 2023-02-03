@@ -3,12 +3,21 @@ import ProductDetail from '../../components/products/ProductDetail';
 // import data from '../../data.json'
 import Image from 'next/image';
 import styles from '../../styles/ProductDetail.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PlusMinus from '../../components/elements/PlusMinus';
 import Link from 'next/link';
+import { useShoppingCart } from '../../components/context/ShoppingCartContext';
 
 function IndividualProductPage(props) {
   const router = useRouter();
+
+  const {
+    getItemQuantity,
+    getTotalNumberItems,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
 
   const productid = router.query.productid;
 
@@ -30,6 +39,13 @@ function IndividualProductPage(props) {
     } else if (change === ' + ' && numvalue < max) {
       setNumvalue((prev) => prev + 1);
     }
+  }
+
+  //Add to Cart Button
+  function addToCart() {
+    console.log('Number value', numvalue, props.products.id);
+
+    const quantity = increaseCartQuantity(props.products.id, numvalue);
   }
 
   return (
@@ -68,7 +84,13 @@ function IndividualProductPage(props) {
             defaultValue={numvalue}
             value={numvalue}
           />
-          <button className="btn-type-1">Add to Cart</button>
+          <button
+            id="add-to-cart-btn"
+            onClick={addToCart}
+            className="btn-type-1"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
       <div className={styles.features_box_container}>
@@ -79,8 +101,8 @@ function IndividualProductPage(props) {
         <div className={styles.box_container}>
           <h2>In The Box</h2>
           <ul className={styles.in_the_box_list}>
-            {props.products.includes.map((element) => (
-              <li key={element.id} className={styles.box_list_li}>
+            {props.products.includes.map((element, index) => (
+              <li key={index} className={styles.box_list_li}>
                 <p className={styles.quantity + ' sub-title'}>
                   {element.quantity + 'x'}
                 </p>

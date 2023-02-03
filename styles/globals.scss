@@ -64,6 +64,24 @@ body.open:before {
   width: 100%;
   z-index: 10;
 }
+body.open_cart:before {
+  content:'';
+  position: fixed;
+  background-color: var(--clr-black-pure);
+  opacity: 0.4;
+  top: 139.88px;
+  right: 0;
+  left: 0;
+  border-radius: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  @media screen and (max-width: $desktop-breakpoint-width) {
+    top: 62px;
+  }
+}
+
+
 
 a {
   color: inherit;
