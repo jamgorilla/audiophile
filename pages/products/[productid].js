@@ -25,6 +25,10 @@ function IndividualProductPage(props) {
 
   const slicedSRC = src.slice(1, src.length);
 
+  function nWC(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
   //Stepper
   const [numvalue, setNumvalue] = useState(1);
 
@@ -76,7 +80,7 @@ function IndividualProductPage(props) {
           {props.products.description}
         </p>
         <p className={styles.product_detail_price}>
-          {'£' + props.products.price}
+          {'£' + nWC(props.products.price)}
         </p>
         <div className={styles.product_detail_stepper_button_container}>
           <PlusMinus

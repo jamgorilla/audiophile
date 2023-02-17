@@ -24,6 +24,10 @@ export default function Checkout() {
     return total;
   }
 
+  function nWC(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
   return (
     <div className={styles.checkout_body}>
       <div className={styles.back_button} onClick={() => Router.back()}>
@@ -105,7 +109,7 @@ export default function Checkout() {
         </ul>
         <div className={styles.summary_rows}>
           <h5 className={styles.summary_left}>Total</h5>
-          <h5 className={styles.summary_right}>£{sumPrices()}</h5>
+          <h5 className={styles.summary_right}>£{nWC(sumPrices())}</h5>
         </div>
         <div className={styles.summary_rows}>
           <h5 className={styles.summary_left}>Shipping</h5>
@@ -113,11 +117,15 @@ export default function Checkout() {
         </div>
         <div className={styles.summary_rows}>
           <h5 className={styles.summary_left}>Vat (included )</h5>
-          <h5 className={styles.summary_right}>£{sumPrices() * 0.2}</h5>
+          <h5 className={styles.summary_right}>
+            £{nWC(Math.ceil(sumPrices() * 0.2))}
+          </h5>
         </div>
         <div className={styles.summary_rows}>
           <h5 className={styles.summary_left}>Grand Total</h5>
-          <h5 className={styles.summary_grand}>£{sumPrices() * 1.2}</h5>
+          <h5 className={styles.summary_grand}>
+            £{nWC(Math.ceil(sumPrices() * 1.2))}
+          </h5>
         </div>
 
         <button className={'btn-type-1 ' + styles.pay_btn}>

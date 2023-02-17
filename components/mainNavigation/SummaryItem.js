@@ -12,6 +12,10 @@ export default function CartItem({ id, quantity }) {
   //Stepper
   const [numvalue, setNumvalue] = useState(quantity);
 
+  function nWC(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
   return (
     <li className={styles.cart_item_li}>
       <div className={styles.left_seperator}>
@@ -25,7 +29,9 @@ export default function CartItem({ id, quantity }) {
         </div>
         <div className={styles.cart_item_description_container}>
           <h6>{data[id - 1].name}</h6>
-          <h6 className={styles.cart_item_price}>{'£' + data[id - 1].price}</h6>
+          <h6 className={styles.cart_item_price}>
+            {'£' + nWC(data[id - 1].price)}
+          </h6>
         </div>
       </div>
       <div className={styles.cart_stepper}>
