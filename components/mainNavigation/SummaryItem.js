@@ -12,21 +12,6 @@ export default function CartItem({ id, quantity }) {
   //Stepper
   const [numvalue, setNumvalue] = useState(quantity);
 
-  function stepper(e) {
-    const change = e.target.innerHTML;
-
-    const max = 50;
-    const min = 1;
-
-    if (change === ' - ' && numvalue > min) {
-      setNumvalue((prev) => prev - 1);
-      dropCartdecreaseQuantity(id, quantity - 1);
-    } else if (change === ' + ' && numvalue < max) {
-      setNumvalue((prev) => prev + 1);
-      dropCartincreaseQuantity(id, quantity + 1);
-    }
-  }
-
   return (
     <li className={styles.cart_item_li}>
       <div className={styles.left_seperator}>
@@ -44,7 +29,7 @@ export default function CartItem({ id, quantity }) {
         </div>
       </div>
       <div className={styles.cart_stepper}>
-        <PlusMinus stepper={stepper} defaultValue={numvalue} value={numvalue} />
+        <p>x {numvalue}</p>
       </div>
     </li>
   );

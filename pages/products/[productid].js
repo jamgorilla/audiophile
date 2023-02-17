@@ -76,7 +76,7 @@ function IndividualProductPage(props) {
           {props.products.description}
         </p>
         <p className={styles.product_detail_price}>
-          {'$' + props.products.price}
+          {'£' + props.products.price}
         </p>
         <div className={styles.product_detail_stepper_button_container}>
           <PlusMinus

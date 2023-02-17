@@ -150,7 +150,7 @@ function MainNavigation(props) {
             </ul>
             <div className={styles.cart_total_price}>
               <h4>Total</h4>
-              <h4>${sumPrices()}</h4>
+              <h4>£{sumPrices()}</h4>
             </div>
             <Link href={'/checkout'} onClick={() => setCart(!cart)}>
               <button className={'btn-type-1 ' + styles.checkout_btn}>

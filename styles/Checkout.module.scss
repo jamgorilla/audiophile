@@ -3,11 +3,25 @@
 
 .checkout_body {
     background-color: var(--clr-grey-primary);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 3rem;
+    & .back_button {
+        grid-column: 1/2;
+        margin-left: var(--standard-margin);
+        &:hover {
+            color: var(--clr-tan-primary);
+            cursor: pointer;
+        }
+    }
     & .checkout_card {
+        grid-column: 1/2;
+
         background-color: var(--clr-white-pure);
         border-radius: var(--standard-border-radius);
         margin-left: var(--standard-margin);
-        width: 80rem;
+
         padding: 3rem;
         & .billing_grid {
             display: grid;
@@ -15,8 +29,44 @@
             & .input_n_label {
                 display: flex;
                 flex-direction: column;
+                & input {
+                    width: 30rem;    
+                }
             }
         }
 
+    }
+    .summary_card {
+        grid-column: 2/3;
+        background-color: var(--clr-white-pure);
+        border-radius: var(--standard-border-radius);
+        margin-right: var(--standard-margin);
+        padding: 3rem;
+        & .summary_item_ul {
+            padding-left: 0rem; 
+        }
+        & .summary_rows {
+            display: flex;
+            justify-content: space-between;
+            & .summary_left {
+                color: var(--clr-btn-darker-grey);
+                opacity: 0.6;
+            }
+            & .summary_grand {
+                color: var(--clr-tan-primary)
+            }
+            & h5 {
+                margin-top: .1rem;
+
+            }
+        }
+        & .pay_btn {
+            width: 100%;
+            height: 4rem;
+            & h5 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 }
