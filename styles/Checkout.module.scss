@@ -1,0 +1,22 @@
+@import './_variables.scss';
+
+
+.checkout_body {
+    background-color: var(--clr-grey-primary);
+    & .checkout_card {
+        background-color: var(--clr-white-pure);
+        border-radius: var(--standard-border-radius);
+        margin-left: var(--standard-margin);
+        width: 80rem;
+        padding: 3rem;
+        & .billing_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            & .input_n_label {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+}

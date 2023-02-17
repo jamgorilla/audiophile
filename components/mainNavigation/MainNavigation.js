@@ -57,7 +57,6 @@ function MainNavigation(props) {
     for (let i = 0; cartItems.length > i; i++) {
       total = total + cartItems[i].quantity;
     }
-    console.log('RECALC', total);
     return total;
   }
   function sumPrices() {
@@ -118,10 +117,17 @@ function MainNavigation(props) {
           alt="cart"
           className="cart"
         />
+        {cartSum() > 0 ? (
+          <div className={styles.cart_number}>
+            <p>{cartSum()}</p>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
       <div className={styles.cart_dropdown_card}>
         {cart && (
-          <div>
+          <div className={styles.cart_container_div}>
             <div className={styles.cart_heading_container}>
               <h4> Cart ({cartSum()})</h4>
               <p
@@ -146,9 +152,11 @@ function MainNavigation(props) {
               <h4>Total</h4>
               <h4>${sumPrices()}</h4>
             </div>
-            <button className={'btn-type-1 ' + styles.checkout_btn}>
-              <h5>Checkout</h5>
-            </button>
+            <Link href={'/checkout'} onClick={() => setCart(!cart)}>
+              <button className={'btn-type-1 ' + styles.checkout_btn}>
+                <h5>Checkout</h5>
+              </button>
+            </Link>
           </div>
         )}
       </div>
