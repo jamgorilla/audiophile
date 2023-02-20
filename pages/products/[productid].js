@@ -35,7 +35,7 @@ function IndividualProductPage(props) {
   function stepper(e) {
     const change = e.target.innerHTML;
 
-    const max = 5;
+    const max = 50;
     const min = 1;
 
     if (change === ' - ' && numvalue > min) {

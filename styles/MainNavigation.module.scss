@@ -8,6 +8,9 @@
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     .explicit_nav_list {
         display: none;
     }
@@ -49,6 +52,7 @@
             grid-row: 1;
             align-self: center;
             position: relative;
+            z-index: 90;
             // justify-content: end;
             justify-self: end;
             cursor: pointer;

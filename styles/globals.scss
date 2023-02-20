@@ -64,7 +64,7 @@ body.open:before {
   width: 100%;
   z-index: 10;
 }
-body.open_cart:before {
+body.open_cart:before, body.open_pay:before {
   content:'';
   position: fixed;
   background-color: var(--clr-black-pure);
