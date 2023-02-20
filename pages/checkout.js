@@ -213,7 +213,7 @@ export default function Checkout() {
               </ul>
               <div className={styles.g_total}>
                 <h5>Grand Total</h5>
-                <h4>£{nWC(sumPrices())}</h4>
+                <h4> £{nWC(Math.ceil(sumPrices() * 1.2))}</h4>
               </div>
             </div>
 
