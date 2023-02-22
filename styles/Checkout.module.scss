@@ -5,8 +5,9 @@
     background-color: var(--clr-grey-primary);
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-
     grid-column-gap: 3rem;
+
+
     & .back_button {
         grid-column: 1/2;
         margin-left: var(--standard-margin);
@@ -60,7 +61,6 @@
     .summary_card {
         grid-column: 2/3;
         align-self: start;
-
         background-color: var(--clr-white-pure);
         border-radius: var(--standard-border-radius);
         margin-right: var(--standard-margin);
@@ -92,24 +92,51 @@
                 margin-top: 0;
                 margin-bottom: 0;
             }
+        }        
+    }
+    // tablet
+    @media screen and (max-width: $desktop-breakpoint-width) { 
+        grid-template-columns: 1fr;
+
+        & .checkout_card {
+            grid-column: 1/2;
+            margin-right: var(--standard-margin);
+            margin-bottom: 3rem;
+            padding: 2rem;
+
+            @media screen and (max-width: $mobile-breakpoint-width) { 
+
+                & .billing_grid, .shipping_grid, .payment_grid {
+                    grid-template-columns: 1fr;
+                }
+                & .shipping_grid div:first-child {
+                    grid-column: 1/2;
+                }
+        
+                & .radio_btns {
+                    margin-top: -2rem;
+                }
+            }
+        }
+        & .summary_card {
+            grid-column: 1/2;
+            margin-left: var(--standard-margin);
+            padding: 2rem;
+
         }
     }
     
     .pay_dropdown_card {
         background-color: var(--clr-white-pure);
         position: fixed;
-
         top: 50%;
         left:  50%;
         right: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
         border-radius: var(--standard-border-radius);
-        // min-width: 578.4px;
-    width: 30%;
-        // align-self: end;
-        // flex-wrap: nowrap;
-
+        width: 30%;
+        min-width: 500px;
         & .pay_container_div {
             padding: 2rem;
         }
