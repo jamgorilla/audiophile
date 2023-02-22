@@ -21,9 +21,9 @@ function IndividualProductPage(props) {
 
   const productid = router.query.productid;
 
-  let src = props.products.image.desktop;
-
-  const slicedSRC = src.slice(1, src.length);
+  function sliceSRC(input) {
+    return input.slice(1, input.length);
+  }
 
   function nWC(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -47,7 +47,7 @@ function IndividualProductPage(props) {
 
   //Add to Cart Button
   function addToCart() {
-    console.log('Number value', numvalue, props.products.id);
+    //console.log('Number value', numvalue, props.products.id);
 
     const quantity = increaseCartQuantity(props.products.id, numvalue);
   }
@@ -64,11 +64,18 @@ function IndividualProductPage(props) {
       </p>
       <div className={styles.top_product_detail_grid}>
         <Image
-          src={slicedSRC}
-          className={styles.top_product_detail_image}
+          src={sliceSRC(props.products.image.desktop)}
+          className={styles.top_product_detail_image_desktop}
           alt="placeholder"
           width={540}
           height={560}
+        />
+        <Image
+          src={sliceSRC(props.products.image.tablet)}
+          className={styles.top_product_detail_image_tablet}
+          alt="placeholder"
+          width={562 * 0.5}
+          height={960 * 0.5}
         />
         {/* <h1 className={ styles.product_detail_id }>{ productid }</h1> */}
 
@@ -115,6 +122,37 @@ function IndividualProductPage(props) {
             ))}
           </ul>
         </div>
+      </div>
+
+      <div className={styles.gallery_grid}>
+        <Image
+          src={sliceSRC(props.products.gallery.first.desktop)}
+          width={445}
+          height={280}
+          alt="first_gallery_image"
+          className={styles.gallery_first}
+        />
+        <Image
+          src={sliceSRC(props.products.gallery.second.desktop)}
+          width={445}
+          height={280}
+          alt="second_gallery_image"
+          className={styles.gallery_second}
+        />
+        <Image
+          src={sliceSRC(props.products.gallery.third.desktop)}
+          width={635}
+          height={592}
+          alt="third_gallery_image"
+          className={styles.gallery_third}
+        />
+        <Image
+          src={sliceSRC(props.products.gallery.third.mobile)}
+          width={654}
+          height={736}
+          alt="third_gallery_image_mobile"
+          className={styles.gallery_third_mobile}
+        />
       </div>
     </div>
   );

@@ -126,9 +126,16 @@
             display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
-            @media screen and (min-width: 2335px) {
-                grid-template-columns: 1fr;
-                
+            @media screen and (max-width: 2335px) {
+                // grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                & .cart_item_ul {
+                    margin-bottom: 0rem !important;
+                 }
+                 & .g_total {
+                    margin-top: 0rem !important;
+                 }
             }
             
             border-radius: var(--standard-border-radius);
