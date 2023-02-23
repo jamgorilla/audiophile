@@ -103,14 +103,16 @@ function MainNavigation(props) {
       </div>
 
       <div className={styles.logo_container}>
-        <Image
-          src={logo}
-          //layout='responsive'
-          height={'58px'}
-          width={'58px'}
-          alt="logo"
-          className="logo"
-        />
+        <Link href={'/'}>
+          <Image
+            src={logo}
+            //layout='responsive'
+            height={'58px'}
+            width={'58px'}
+            alt="logo"
+            className="logo"
+          />
+        </Link>
       </div>
       <div className={styles.cart_container} onClick={() => setCart(!cart)}>
         <Image

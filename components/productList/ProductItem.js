@@ -32,7 +32,6 @@ function ProductItem(props) {
         {props.new && <p className="overline">New Product</p>}
         <div className={styles.product_n_title_block}>
           <h2>{props.name}</h2>
-          <h2>{props.productCode}</h2>
         </div>
 
         <p>{props.description}</p>
