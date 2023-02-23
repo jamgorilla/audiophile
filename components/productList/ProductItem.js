@@ -3,17 +3,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function ProductItem(props) {
-  const slicedSRC = props.image.slice(1, props.image.length);
+  // const slicedSRC = props.image.slice(1, props.image.length);
+  // console.log(slicedSRC);
+
+  function sliceSRC(input) {
+    return input.slice(1, input.length);
+  }
 
   return (
     <li className={styles.product_list}>
       <div className={styles.product_list_image_container}>
         <Image
-          src={slicedSRC}
+          src={sliceSRC(props.imageDesktop)}
           width={540}
           height={560}
           alt="placeholder"
-          className={styles.product_list_image}
+          className={styles.product_list_image_desktop}
+        />
+        <Image
+          src={sliceSRC(props.imageMobile)}
+          width={704}
+          height={654}
+          alt="placeholder"
+          className={styles.product_list_image_mobile}
         />
       </div>
       <div className={styles.product_list_content_container}>

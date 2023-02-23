@@ -77,6 +77,13 @@ function IndividualProductPage(props) {
           width={562 * 0.5}
           height={960 * 0.5}
         />
+        <Image
+          src={sliceSRC(props.products.image.mobile)}
+          className={styles.top_product_detail_image_mobile}
+          alt="placeholder"
+          width={654 * 0.4}
+          height={654 * 0.4}
+        />
         {/* <h1 className={ styles.product_detail_id }>{ productid }</h1> */}
 
         <p className={'overline ' + styles.product_detail_new_product}>

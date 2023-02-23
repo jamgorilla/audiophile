@@ -20,7 +20,8 @@ function ProductList(props) {
             <ProductItem
               name={element.name}
               description={element.description}
-              image={element.image.desktop}
+              imageDesktop={element.image.desktop}
+              imageMobile={element.image.mobile}
               new={element.new}
               id={element.id}
               key={element.id}

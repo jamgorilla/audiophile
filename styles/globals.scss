@@ -39,6 +39,14 @@ body {
   @media screen and (max-width: 1400px) {
     --standard-margin: 6rem;
   }
+  // mobile
+  @media screen and (max-width: 765px) {
+    --standard-margin: 3rem;
+  }
+  // mobile
+  @media screen and (max-width: 400px) {
+    --standard-margin: 1.5rem;
+  }
 
   ///// Product list padding
   @media screen and (min-width: 2850px) {
