@@ -62,7 +62,7 @@ body {
 
 body.open:before {
   content:'';
-  // position: fixed;
+  position: fixed;
   background-color: var(--clr-black-pure);
   opacity: 0.4;
   top: 62px;
@@ -75,7 +75,7 @@ body.open:before {
 }
 body.open_cart:before, body.open_pay:before {
   content:'';
-  // position: fixed;
+  position: fixed;
   background-color: var(--clr-black-pure);
   opacity: 0.4;
   top: 139.88px;
