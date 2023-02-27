@@ -13,11 +13,13 @@
 .plus_minus_buttons {
     border: none;
     width: 40px;
+    color: var(--clr-black-primary);
 }
 
 .number_input { 
     background-color: var(--clr-grey-primary);
     border: none;
+    border-radius: 0;
     appearance: none; 
     -webkit-appearance: textfield; 
     width: 40px;
