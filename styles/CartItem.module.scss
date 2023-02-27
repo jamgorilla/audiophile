@@ -1,3 +1,6 @@
+@import './_variables.scss';
+
+
 .cart_item_li {
     display: flex;
     flex-direction: row;
@@ -5,11 +8,24 @@
     gap: 5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+    gap: 0rem;
+    }
     & .left_seperator {
         display: flex;
         flex-direction: row;
+        @media screen and (max-width: $mobile-breakpoint-width) {
+            & .cart_item_img_container {
+                display: flex;
+                align-items: center;
+            }  
+        }
         & .cart_item_img_container img {
             border-radius: var(--standard-border-radius);
+            @media screen and (max-width: $mobile-breakpoint-width) {
+                width: 64px;
+                height: 64px;
+            }
         }
         & .cart_item_description_container {
             display: flex;
@@ -18,6 +34,18 @@
             margin-top: 0.8rem;
             margin-bottom: 0.8rem;
             margin-left: 1rem;
+
+            & .mobile_name {
+                display: none;
+            }
+            @media screen and (max-width: $mobile-breakpoint-width) {
+                & .full_name {
+                    display: none;
+                }
+                & .mobile_name {
+                    display: block;
+                }
+            }
             & h6 {
                 margin-top: 0rem;
                 margin-bottom: 0rem;

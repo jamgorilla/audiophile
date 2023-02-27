@@ -1,7 +1,13 @@
+@import './_variables.scss';
+
 .plus_minus_container {
     width: 120px;
     height: 48px;
     display: flex;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+        width: 96px;
+        height: 32px;
+    }
 }
 
 .plus_minus_buttons {
