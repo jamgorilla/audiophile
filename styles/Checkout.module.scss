@@ -144,9 +144,11 @@
             left: 5%;
             min-width: unset;    
             width: 90%;
-            
-  overflow: auto;
             transform: none;
+            & .pay_container_div {
+                overflow: auto;
+
+            }
         }
 
         & .pay_container_div {
