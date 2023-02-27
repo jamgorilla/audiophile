@@ -139,7 +139,7 @@
         min-width: 500px; 
 
         @media screen and (max-width: $mobile-breakpoint-width) {
-            position: fixed;
+            // position: fixed;
             top: 7rem;
             left: 5%;
             min-width: unset;    
