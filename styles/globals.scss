@@ -60,10 +60,7 @@ body {
 }
 
 body {
-  overflow-x: clip;
-  // @media screen and (max-width: $mobile-breakpoint-width) { 
-  //   padding-top: 80px;
-  // }
+  overflow-x: hidden;
 }
 
 body.open:before {
