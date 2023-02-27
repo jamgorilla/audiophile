@@ -15,6 +15,9 @@
         & .tablet_hero_image {
             display: none;
         }
+        & .mobile_hero_image {
+            display: none;
+        }
     }
     // tablet
     @media screen and (max-width: $desktop-breakpoint-width) and (min-width: $mobile-breakpoint-width) {
@@ -25,6 +28,9 @@
         & .tablet_hero_image {
             display: block;
         }
+        & .mobile_hero_image {
+            display: none;
+        }
     }
     // mobile
     @media screen and (max-width: $mobile-breakpoint-width) {
@@ -33,6 +39,10 @@
             display: none;
         }
         & .tablet_hero_image {
+            display: none;
+
+        }
+        & .mobile_hero_image {
             display: block;
         }
     }
@@ -46,11 +56,18 @@
     color: var(--clr-white-pure);
     width: 35rem;
     // margin: 0 auto;
+    @media screen and (max-width: $mobile-breakpoint-width){
+        width: auto;
+        @media screen and (max-width: 500px){
+            top: 15%;
+        }
+    }
 
     & .hero_title_overline {
         color: var(--clr-btn-default-grey);
         font-weight: 200;
     }
+    
     & .hero_paragraph {
         max-width: 43rem;
         // font-weight: 400;
@@ -89,7 +106,7 @@
     background-repeat: no-repeat;
     background-position-x: -5%;
     background-position-y: -10%;
-    background-size: 50%;
+    background-size: 50%; 
 
    & .zx9_speaker_image_container {
     position: absolute;
@@ -140,6 +157,9 @@
    }
    @media screen and (max-width: $mobile-breakpoint-width)  { 
         margin-top: 3rem;
+        & .zx9_speaker_text .zx9_speaker_paragraph {
+            width: 280px;
+        }
    }
 }
 
@@ -172,6 +192,9 @@
         position: absolute;
         top: 30%;
         left: 6rem;
+     @media screen and (max-width: $mobile-breakpoint-width)  { 
+        left: 2rem;
+     } 
 
     }
 }
@@ -216,6 +239,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media screen and (max-width: $mobile-breakpoint-width)  { 
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+        }
     }
 }
 

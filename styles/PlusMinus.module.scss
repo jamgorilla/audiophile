@@ -4,10 +4,10 @@
     width: 120px;
     height: 48px;
     display: flex;
-    @media screen and (max-width: $mobile-breakpoint-width) {
-        width: 96px;
-        height: 32px;
-    }
+    // @media screen and (max-width: $mobile-breakpoint-width) {
+    //     width: 96px;
+    //     height: 32px;
+    // }
 }
 
 .plus_minus_buttons {
@@ -18,8 +18,8 @@
 .number_input { 
     background-color: var(--clr-grey-primary);
     border: none;
-    /* appearance: none; */
-    /* -webkit-appearance: textfield; */
+    appearance: none; 
+    -webkit-appearance: textfield; 
     width: 40px;
     text-align: center;
 }

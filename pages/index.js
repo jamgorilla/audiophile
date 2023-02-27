@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.scss';
 import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg';
 import heroImage from '../public/assets/home/desktop/image-hero.jpg';
 import heroImageTablet from '../public/assets/home/tablet/image-header.jpg';
+import heroImageMobile from '../public/assets/home/mobile/image-header.jpg';
+
 import zx9Speaker from '../public/assets/home/desktop/image-speaker-zx9.png';
 import best_gear from '../public/assets/shared/desktop/image-best-gear.jpg';
 
@@ -57,12 +59,21 @@ export default function Home() {
             quality={100}
             layout="responsive"
           />
+          <Image
+            src={heroImageMobile}
+            className={styles.mobile_hero_image}
+            alt="hero-image-earphones"
+            quality={100}
+            layout="responsive"
+          />
 
           <div className={styles.hero_text_container}>
             <p className={`overline ${styles.hero_title_overline}`}>
               New Product
             </p>
-            <h1>XX99 Mark II Headphones</h1>
+            <h1 className={styles.hero_title}>
+              XX99 Mark II<br></br>Headphones
+            </h1>
             <p className={styles.hero_paragraph}>
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
@@ -93,10 +104,8 @@ export default function Home() {
           <div className={styles.zx9_speaker_text}>
             <h1>ZX9 Speaker</h1>
             <p className={styles.zx9_speaker_paragraph}>
-              Upgrade your sound system with the all new ZX9 active speaker.
-              It’s a bookshelf speaker system that offers truly wireless
-              connectivity -- creating new possibilities for more pleasing and
-              practical audio setups.
+              Upgrade to premium speakers that are phenomenally built to deliver
+              truly remarkable sound.
             </p>
             <Link href={'/products/6'}>
               <button className={`btn-type-1 ${styles.zx9_see_product_button}`}>
