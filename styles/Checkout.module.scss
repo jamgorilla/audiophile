@@ -136,7 +136,18 @@
         z-index: 10;
         border-radius: var(--standard-border-radius);
         width: 30%;
-        min-width: 500px;
+        min-width: 500px; 
+
+        @media screen and (max-width: $mobile-breakpoint-width) {
+            position: fixed;
+            top: 7rem;
+            left: 5%;
+            min-width: unset;    
+            width: 90%;
+            overflow-y: scroll;
+            transform: none;
+        }
+
         & .pay_container_div {
             padding: 2rem;
         }
