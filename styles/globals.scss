@@ -69,7 +69,7 @@ body.open_pay {
 body.open:before {
   content:'';
   position: fixed;
-  overflow: auto;
+  overflow: scroll;
 
   background-color: var(--clr-black-pure);
   opacity: 0.4;
@@ -84,7 +84,8 @@ body.open:before {
 body.open_cart:before, body.open_pay:before {
   content:'';
   position: fixed;
-  overflow: auto;
+  overflow: scroll;
+
 
   background-color: var(--clr-black-pure);
   opacity: 0.4;
