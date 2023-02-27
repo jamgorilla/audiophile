@@ -59,8 +59,11 @@ body {
   /* overflow: hidden; */
 }
 
-html {
+body {
   overflow-x: clip;
+}
+body.open_pay {
+  overflow: hidden;
 }
 
 body.open:before {
