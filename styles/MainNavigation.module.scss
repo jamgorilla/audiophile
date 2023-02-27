@@ -9,6 +9,7 @@
     padding-right: 24px;
     padding-bottom: 16px;
     position: sticky;
+    -webkit-overflow-scrolling: touch;
     top: 0;
     z-index: 10;
     & .explicit_nav_list {
