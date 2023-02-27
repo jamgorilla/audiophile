@@ -60,7 +60,7 @@ body {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.open:before {
