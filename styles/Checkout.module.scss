@@ -144,7 +144,8 @@
             left: 5%;
             min-width: unset;    
             width: 90%;
-            overflow-y: scroll;
+            
+  overflow: auto;
             transform: none;
         }
 
