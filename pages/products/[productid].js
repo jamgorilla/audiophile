@@ -1,23 +1,14 @@
 import { useRouter } from 'next/router';
-import ProductDetail from '../../components/products/ProductDetail';
-// import data from '../../data.json'
 import Image from 'next/image';
 import styles from '../../styles/ProductDetail.module.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PlusMinus from '../../components/elements/PlusMinus';
-import Link from 'next/link';
 import { useShoppingCart } from '../../components/context/ShoppingCartContext';
 
 function IndividualProductPage(props) {
   const router = useRouter();
 
-  const {
-    getItemQuantity,
-    getTotalNumberItems,
-    increaseCartQuantity,
-    decreaseCartQuantity,
-    removeFromCart,
-  } = useShoppingCart();
+  const { increaseCartQuantity } = useShoppingCart();
 
   const productid = router.query.productid;
 
@@ -34,7 +25,6 @@ function IndividualProductPage(props) {
 
   function stepper(e) {
     const change = e.target.innerHTML;
-
     const max = 50;
     const min = 1;
 
@@ -45,10 +35,8 @@ function IndividualProductPage(props) {
     }
   }
 
-  //Add to Cart Button
+  //Add to Cart Function
   function addToCart() {
-    //console.log('Number value', numvalue, props.products.id);
-
     const quantity = increaseCartQuantity(props.products.id, numvalue);
   }
 

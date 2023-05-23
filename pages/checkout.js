@@ -13,16 +13,9 @@ import Image from 'next/image';
 export default function Checkout() {
   const [pay, setPay] = useState(false);
 
-  const {
-    getItemQuantity,
-    getTotalNumberItems,
-    increaseCartQuantity,
-    decreaseCartQuantity,
-    removeFromCart,
-    cartItems,
-    removeAllItems,
-  } = useShoppingCart();
+  const { cartItems } = useShoppingCart();
 
+  // Calculates total price of items in the cart
   function sumPrices() {
     let total = 0;
     for (let i = 0; cartItems.length > i; i++) {
@@ -31,25 +24,18 @@ export default function Checkout() {
     return total;
   }
 
-  function cartSum() {
-    let total = 0;
-    for (let i = 0; cartItems.length > i; i++) {
-      total = total + cartItems[i].quantity;
-    }
-    return total;
-  }
-
+  // Format number with comma as thousand separator
   function nWC(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
   useEffect(() => {
-    // console.log('clicked');
+    // Update the class of the body element based on the "pay" state
     if (pay === true) {
-      //add open class to body
+      //add "open_pay" class to body
       document.body.classList.add('open_pay');
     } else {
-      //remove open class from body
+      //remove "open_pay" class from body
       document.body.classList.remove('open_pay');
     }
   }, [pay]);

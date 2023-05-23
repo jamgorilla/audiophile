@@ -4,9 +4,7 @@ import logo from '../../public/assets/shared/desktop/logo.svg';
 import facebook from '../../public/assets/shared/desktop/icon-facebook.svg';
 import twitter from '../../public/assets/shared/desktop/icon-twitter.svg';
 import instagram from '../../public/assets/shared/desktop/icon-instagram.svg';
-
 import styles from '../../styles/Footer.module.scss';
-
 import navListData from '../../navListData.json';
 
 function Footer() {

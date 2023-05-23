@@ -1,4 +1,3 @@
-// import CustomForwardImage from './CustomForwardImage.js';
 import Image from 'next/image';
 import cartIcon from '../../public/assets/shared/desktop/icon-cart.svg';
 import logo from '../../public/assets/shared/desktop/logo.svg';
@@ -14,23 +13,18 @@ import navListData from '../../navListData.json';
 import { useState, useEffect } from 'react';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
+// Main navigation component
 function MainNavigation(props) {
-  const [open, setOpen] = useState(false);
-  const [cart, setCart] = useState(false);
+  const [open, setOpen] = useState(false); // State for hamburger menu
+  const [cart, setCart] = useState(false); // State for cart
 
-  const {
-    getItemQuantity,
-    getTotalNumberItems,
-    increaseCartQuantity,
-    decreaseCartQuantity,
-    removeFromCart,
-    cartItems,
-    removeAllItems,
-  } = useShoppingCart();
+  const { getItemQuantity, getTotalNumberItems, cartItems, removeAllItems } =
+    useShoppingCart(); // Access shopping cart context functions
 
-  const quantity = getItemQuantity();
-  const total = getTotalNumberItems();
+  const quantity = getItemQuantity(); // Get current item quantity
+  const total = getTotalNumberItems(); // Get total number of items in the cart
 
+  // Toggle open class on body element when hamburger menu state changes
   useEffect(() => {
     if (open === true) {
       //add open class to body
@@ -41,8 +35,8 @@ function MainNavigation(props) {
     }
   }, [open]);
 
+  // Toggle open class on body element when cart state changes
   useEffect(() => {
-    // console.log('clicked');
     if (cart === true) {
       //add open class to body
       document.body.classList.add('open_cart');
@@ -52,6 +46,7 @@ function MainNavigation(props) {
     }
   }, [cart]);
 
+  // Calculate total quantity of items in the cart
   function cartSum() {
     let total = 0;
     for (let i = 0; cartItems.length > i; i++) {
@@ -59,6 +54,7 @@ function MainNavigation(props) {
     }
     return total;
   }
+  // Calculate total prices of items in the cart
   function sumPrices() {
     let total = 0;
     for (let i = 0; cartItems.length > i; i++) {
@@ -67,6 +63,7 @@ function MainNavigation(props) {
     return total;
   }
 
+  // Function to format numbers with thousand separators
   function nWC(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
@@ -106,7 +103,6 @@ function MainNavigation(props) {
         <Link href={'/'}>
           <Image
             src={logo}
-            //layout='responsive'
             height={'58px'}
             width={'58px'}
             alt="logo"
@@ -117,7 +113,6 @@ function MainNavigation(props) {
       <div className={styles.cart_container} onClick={() => setCart(!cart)}>
         <Image
           src={cartIcon}
-          //layout='responsive'
           height={'58px'}
           width={'58px'}
           alt="cart"

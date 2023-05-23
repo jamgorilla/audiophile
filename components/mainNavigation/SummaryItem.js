@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import data from '../../data.json';
 import styles from '../../styles/CartItem.module.scss';
-import PlusMinus from '../elements/PlusMinus';
 import { useState } from 'react';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
+// Cart item component
 export default function CartItem({ id, quantity }) {
   const { dropCartincreaseQuantity, dropCartdecreaseQuantity } =
     useShoppingCart();

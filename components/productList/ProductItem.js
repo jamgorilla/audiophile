@@ -2,10 +2,8 @@ import styles from '../../styles/Products.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Product item component
 function ProductItem(props) {
-  // const slicedSRC = props.image.slice(1, props.image.length);
-  // console.log(slicedSRC);
-
   function sliceSRC(input) {
     return input.slice(1, input.length);
   }
@@ -36,7 +34,6 @@ function ProductItem(props) {
 
         <p>{props.description}</p>
         <Link href={`products/${props.id}`}>
-          {/* <Link href={ `products/${props.slug}${props.id}` }> */}
           <button className={`btn-type-1 ${styles.zx9_see_product_button}`}>
             See product
           </button>

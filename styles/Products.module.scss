@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-////// product list ///////
+// Product list
 .product_list_ul {
     list-style: none;    
     padding-left: 0rem;
@@ -94,7 +94,6 @@
                 align-items: center;
                 gap: 0rem;
                 & .product_list_content_container {
-                    // background-color: red;
                     margin-top: 3rem;
                     text-align: center;
                 }
@@ -108,8 +107,7 @@
 @media screen and (max-width: $mobile-breakpoint-width) {
     
 .product_list_ul .product_list_image_container {
-            // display: flex;
-            
+
             & .product_list_image_desktop {
                 display: none;
             }

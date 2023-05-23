@@ -1,9 +1,7 @@
 @import './_variables.scss';
 
-
 .main_navigation {
     background-color: var(--clr-black-pure);
-    // color: var(--clr-white-pure);
     padding-top: 16px;
     padding-left: 24px;
     padding-right: 24px;
@@ -40,10 +38,8 @@
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 1fr;
-
         padding-left: var(--standard-margin);
         padding-right: var(--standard-margin);
-
 
         .logo_container {
             grid-column-start: 1;
@@ -58,7 +54,6 @@
             align-self: center;
             position: relative;
             z-index: 90;
-            // justify-content: end;
             justify-self: end;
             cursor: pointer;
         }
@@ -138,7 +133,6 @@
 
     
 .main_nav_list {
-    /* width: 100%; */
     position: relative;
     margin-top: 14rem;
     margin-bottom: 0rem;
@@ -161,7 +155,6 @@
     @media screen and (max-width: $mobile-breakpoint-width) {
         & img {
             transform: translateY(40px); 
-
             width: calc(267px*0.7);
             height: calc(241.5px*0.7);
         }
@@ -210,13 +203,11 @@
 
 .cart_dropdown_card {
     background-color: var(--clr-white-pure);
-    // margin: 0;
     position: absolute;
     top: 10rem;
     right: var(--standard-margin);
     z-index: 10;
     border-radius: var(--standard-border-radius);
-    // min-width: 578.4px; 
     & .cart_container_div {
         padding: 2rem;
     }

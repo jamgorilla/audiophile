@@ -1,7 +1,5 @@
 import styles from '../../styles/PlusMinus.module.scss';
 
-// import { useState } from 'react'
-
 function PlusMinus(props) {
   return (
     <div className={styles.plus_minus_container}>

@@ -1,9 +1,8 @@
 import styles from '../../styles/Products.module.scss';
 import ProductItem from './ProductItem';
 
+// Product list component
 function ProductList(props) {
-  //console.log("PROO", props.productCode )
-
   const productArray = ['Headphones', 'Speakers', 'Earphones'];
 
   return (

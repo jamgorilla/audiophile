@@ -47,16 +47,10 @@ body {
   @media screen and (max-width: 400px) {
     --standard-margin: 1.5rem;
   }
-
-  ///// Product list padding
   @media screen and (min-width: 2850px) {
     --product-list-padding: 20rem;
 }
-
-  //standard border radius
   --standard-border-radius: 8px;
-  
-  /* overflow: hidden; */
 }
 
 body {

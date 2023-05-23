@@ -1,8 +1,6 @@
 @import './_variables.scss';
 
-
 .hero_section {
-    // background-image: url("../public/assets/home/tablet/image-header.jpg");
     position: relative;
     background-color: black;
 
@@ -40,13 +38,11 @@
         }
         & .tablet_hero_image {
             display: none;
-
         }
         & .mobile_hero_image {
             display: block;
         }
     }
-
 }
 
 .hero_text_container {
@@ -55,7 +51,6 @@
     margin-left: var(--standard-margin);
     color: var(--clr-white-pure);
     width: 35rem;
-    // margin: 0 auto;
     @media screen and (max-width: $mobile-breakpoint-width){
         width: auto;
         @media screen and (max-width: 500px){
@@ -67,10 +62,8 @@
         color: var(--clr-btn-default-grey);
         font-weight: 200;
     }
-    
     & .hero_paragraph {
         max-width: 43rem;
-        // font-weight: 400;
     }
     & .hero_see_product_button {
         margin-top: 2rem;
@@ -93,7 +86,6 @@
 }
 
 // ZX9
-
 .advertisment_zx9_speaker {
     margin-left: var(--standard-margin);
     margin-right: var(--standard-margin);
@@ -231,7 +223,6 @@
             background-image: url('../public/assets/home/mobile/image-earphones-yx1.jpg');
         }
     }
-
 
     & .earphone_title_n_button {
         background-color: var(--clr-btn-default-grey);

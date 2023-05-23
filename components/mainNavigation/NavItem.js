@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import arrowRight from './../../public/assets/shared/desktop/icon-arrow-right.svg';
 
+// Navigation item component
 function NavItem(props) {
   return (
     <li className={styles.main_nav_list}>

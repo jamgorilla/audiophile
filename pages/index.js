@@ -1,31 +1,22 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
-import arrowRight from '../public/assets/shared/desktop/icon-arrow-right.svg';
 import heroImage from '../public/assets/home/desktop/image-hero.jpg';
 import heroImageTablet from '../public/assets/home/tablet/image-header.jpg';
 import heroImageMobile from '../public/assets/home/mobile/image-header.jpg';
-
 import zx9Speaker from '../public/assets/home/desktop/image-speaker-zx9.png';
-import best_gear from '../public/assets/shared/desktop/image-best-gear.jpg';
-
 import BestAudio from '../components/section/BestAudio';
-
 import Link from 'next/link';
-
-import PlusMinus from '../components/elements/PlusMinus';
-import RadioBtn from '../components/elements/RadioBtn';
 import { useState } from 'react';
-import MainNavigation from '../components/mainNavigation/MainNavigation';
 import NavList from '../components/mainNavigation/NavList';
 import navListDataIndex from '../navListData.json';
 
 export default function Home() {
   const [numvalue, setNumvalue] = useState(1);
 
+  // Handles stepper button clicks
   function stepper(e) {
     const change = e.target.innerHTML;
-
     const max = 50;
     const min = 1;
 
@@ -139,31 +130,6 @@ export default function Home() {
         </div>
 
         <BestAudio />
-
-        {/* <h1>Homepage</h1>
-        <h2>Homepage</h2>
-        <h3>Homepage</h3>
-        <h4>Homepage</h4>
-        <h5>Homepage</h5>
-        <h6>Homepage</h6>
-        <p className="overline">Homepage</p>
-        <p className="sub-title">Homedsdspage</p>
-        <p>Homepage</p>
-        <button className="btn-type-1">See product</button>
-        <button className="btn-type-2">See product</button>
-        <button className="btn-type-3">
-          Shop&nbsp;&nbsp;
-          <Image src={arrowRight} alt="arrow-right" />
-        </button>
-
-        <label className="text-btn-label" htmlFor="test">
-          Name
-        </label>
-        <input type="text" id="test" placeholder="Insert your name" />
-
-        <RadioBtn innerHTML="e-Money" />
-
-        <PlusMinus stepper={stepper} defaultValue={numvalue} /> */}
       </main>
 
       <footer className={styles.footer}></footer>

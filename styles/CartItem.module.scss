@@ -53,8 +53,7 @@
             & .cart_item_price {
                 color: var(--clr-btn-darker-grey);
                 opacity: 0.6;
-            }
-            
+            }  
         }
     }
     & .cart_stepper {
@@ -62,6 +61,5 @@
         flex-direction: column;
         justify-content: center;
         white-space: nowrap;
-
     }
 }

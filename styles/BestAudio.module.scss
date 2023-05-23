@@ -18,11 +18,9 @@
     @media screen and (max-width: $desktop-breakpoint-width)  { 
         grid-template-columns: 1fr;
     }
-
     & .audio_gear_text {
         display: flex;
         flex-direction: column;
-        // padding-top: 5rem;
         justify-content: center;
         padding-right: 8rem;
         & span {

@@ -5,16 +5,16 @@ import PlusMinus from '../elements/PlusMinus';
 import { useState } from 'react';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
+// Component to display a single item in cart
 export default function CartItem({ id, quantity }) {
   const { dropCartincreaseQuantity, dropCartdecreaseQuantity } =
     useShoppingCart();
 
-  //Stepper
+  // Stepper functionality to increase or decrease item quantity
   const [numvalue, setNumvalue] = useState(quantity);
 
   function stepper(e) {
     const change = e.target.innerHTML;
-
     const max = 50;
     const min = 1;
 
@@ -27,6 +27,7 @@ export default function CartItem({ id, quantity }) {
     }
   }
 
+  // Function to format numbers with thousand separators
   function nWC(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
