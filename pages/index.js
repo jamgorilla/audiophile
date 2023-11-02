@@ -40,6 +40,7 @@ export default function Home() {
             src={heroImage}
             className={styles.desktop_hero_image}
             alt="hero-image-earphones-big"
+            priority={true}
             quality={100}
             layout="responsive"
           />
@@ -47,6 +48,7 @@ export default function Home() {
             src={heroImageTablet}
             className={styles.tablet_hero_image}
             alt="hero-image-earphones"
+            priority={true}
             quality={100}
             layout="responsive"
           />
@@ -54,13 +56,14 @@ export default function Home() {
             src={heroImageMobile}
             className={styles.mobile_hero_image}
             alt="hero-image-earphones"
+            priority={true}
             quality={100}
             layout="responsive"
           />
 
           <div className={styles.hero_text_container}>
             <p className={`overline ${styles.hero_title_overline}`}>
-              New Product
+              New XXX Product
             </p>
             <h1 className={styles.hero_title}>
               XX99 Mark II<br></br>Headphones

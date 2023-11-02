@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/assets/music-note-icon.png" type="image/png" />
         <meta
-          name="viewport"
+          // name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Head>

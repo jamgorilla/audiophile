@@ -60,7 +60,7 @@
     
     }
 }
-
+// This controls the layout of the product list alternating left and right between odd and even
 .product_list:nth-child(odd) { 
     & .product_list_image_container {
         grid-column: 1/2;

@@ -106,6 +106,7 @@ function MainNavigation(props) {
             height={'58px'}
             width={'58px'}
             alt="logo"
+            priority={true}
             className="logo"
           />
         </Link>

@@ -12,17 +12,20 @@ function IndividualProductPage(props) {
 
   const productid = router.query.productid;
 
+  // Function to slice the source string
   function sliceSRC(input) {
     return input.slice(1, input.length);
   }
 
+  // Function to add commas to numbers in the thousands
   function nWC(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
-  //Stepper
+  //State of value in stepper button
   const [numvalue, setNumvalue] = useState(1);
 
+  // Function to handle the stepper buttons
   function stepper(e) {
     const change = e.target.innerHTML;
     const max = 50;
@@ -35,7 +38,7 @@ function IndividualProductPage(props) {
     }
   }
 
-  //Add to Cart Function
+  //Function to add the product to the cart
   function addToCart() {
     const quantity = increaseCartQuantity(props.products.id, numvalue);
   }
@@ -785,6 +788,7 @@ export async function getStaticProps(context) {
     },
   ];
 
+  //path from the dynamic call to pages/product/productid
   const productid = context.params.productid;
 
   return {
