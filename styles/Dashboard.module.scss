@@ -1,0 +1,12 @@
+@import './_variables.scss';
+
+.main_page {
+    & .boards_container {
+        display: flex;
+        gap: 5px;
+        & .custom_total_board {
+            background-color: rgb(31,41,64);
+            
+        }
+    }
+}

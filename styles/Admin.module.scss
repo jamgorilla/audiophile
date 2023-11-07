@@ -1,19 +1,24 @@
 @import './_variables.scss';
 
+$admin_dark: #181A1E;
+$admin_medium: #202528;
+$admin_light: #81899B;
+$admin_off_white: #E4EBF8;
+
 
 .page_container {
 
     background-color: rgb(20,27,45);
     display: grid;
     grid-template-columns: 1.3fr 6fr;
-    color: white;
+    color: $admin_off_white;
     
     text-decoration: none;
     list-style-type: none;
     height: 100vh;
     
     & .sidebar {
-        background-color: rgb(31,41,64);
+        background-color: $admin_dark;
         grid-column: 1/2;
         padding-left: 10px;
         padding-right: 10px;
@@ -27,21 +32,31 @@
             padding-left: 10px;
 
         }
-        & ul {
+        & .categoryList {
             list-style-type: none;
+            background-color: $admin_medium;
+            color: $admin_light;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
             padding-left: 0px;
             & li {
-                // background-color: #3E4861;
-                margin: 5px;
-                padding-left: 10px;
-                // border: 2px solid rgb(31,41,64);
-                background-color: rgb(31,41,64);
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 100px;
+
+                
                 transition: background-color 0.5s;
 
                 &:hover {
                     
-                    background-color: #3E4861;
-                    // background-color: rgb(20,27,45);
+                    background-color: $admin_dark;
+                    
+                    cursor: pointer;
+                    
                 }
             }
         }
@@ -90,6 +105,7 @@
                     height: 70px;
                     align-items: center;
                     justify-content: center;
+                  
                 }
             }
         }
@@ -125,10 +141,10 @@
                 }
             }
             & .generatedRow:nth-child(odd) { 
-                background-color: rgb(31,41,64);
+                background-color: #3E4861;
             }
             & .generatedRow:nth-child(even) {
-                background-color: #3E4861;
+                background-color: rgb(31,41,64);
             }
         }
     }

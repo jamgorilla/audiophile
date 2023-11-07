@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from '../../styles/Admin.module.scss';
 import { db } from '../../firebase/firebase';
 import { getDocs, collection } from 'firebase/firestore';
+import Dashboard from './dashboard';
 import CustomerList from './customerList';
 import ProductList from './productList';
 import OrderList from './orderList';
@@ -22,7 +23,8 @@ function Admin() {
           <p className={styles.back_btn}>Back</p>
         </Link>
         <h3>Admin Area</h3>
-        <ul>
+        <ul className={styles.categoryList}>
+          <li onClick={() => setSelectedCategory('dashboard')}>Dashboard</li>
           <li onClick={() => setSelectedCategory('customers')}>Customers</li>
           <li onClick={() => setSelectedCategory('orders')}>Orders</li>
           <li onClick={() => setSelectedCategory('products')}>Products</li>
@@ -30,6 +32,8 @@ function Admin() {
       </div>
       <div className="main-content">
         {/* Conditionally render components based on selectedCategory */}
+        {selectedCategory === 'dashboard' && <Dashboard />}
+
         {selectedCategory === 'customers' && <CustomerList />}
         {selectedCategory === 'products' && <ProductList />}
         {selectedCategory === 'orders' && <OrderList />}

@@ -20,7 +20,7 @@ function CustomerList() {
           ...doc.data(),
           id: doc.id,
         }));
-        console.log(filteredData);
+        // console.log(filteredData);
         setCustomerList(filteredData);
       } catch (err) {
         console.error(err);
