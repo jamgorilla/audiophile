@@ -47,3 +47,10 @@
     // align-items: center;
     // justify-content: center;
 }
+
+.customer_container {
+    padding-left: 0px;
+    & .popout_email {
+        padding-left: 0px;
+    }
+}

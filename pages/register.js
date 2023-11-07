@@ -1,14 +1,36 @@
 import React from 'react';
 import { useState } from 'react';
 import { db } from '../firebase/firebase';
-import { getDocs, collection } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
+import { useRouter } from 'next/router';
 
 export default function Register() {
-  // New Movie States
+  // New Customer States
   const [newCustomerName, setNewCustomerName] = useState('');
   const [newCustomerEmail, setNewCustomerEmail] = useState('');
-  const [newCustomerPhone, setNewCustomerPhone] = useState('');
-  const [newCustomerID, setNewCustomerID] = useState(0);
+  const [newPassword, setNewPassword] = useState('');
+
+  //reference to customer collection
+  const customerCollectionRef = collection(db, 'customers');
+
+  // Initialise router
+  const router = useRouter();
+
+  // add new customer collection to database
+  const onSubmitCustomer = async () => {
+    try {
+      await addDoc(customerCollectionRef, {
+        Name: newCustomerName,
+        Email: newCustomerEmail,
+        Passwod: newPassword,
+      });
+
+      // If the data submission is successful, redirect to the checkout screen
+      router.push('/checkout');
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div>
@@ -22,16 +44,11 @@ export default function Register() {
         onChange={(e) => setNewCustomerEmail(e.target.value)}
       ></input>
       <input
-        placeholder="Phone"
-        onChange={(e) => setNewCustomerPhone(e.target.value)}
-      ></input>
-      <input
-        placeholder="CustomerID"
-        type="number"
-        onChange={(e) => setNewCustomerID(Number(e.target.value))}
+        placeholder="Password"
+        onChange={(e) => setNewPassword(e.target.value)}
       ></input>
 
-      <button>Submit</button>
+      <button onClick={onSubmitCustomer}>Submit</button>
       <p>Continue as Guest</p>
     </div>
   );

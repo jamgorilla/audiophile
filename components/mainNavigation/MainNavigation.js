@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import cartIcon from '../../public/assets/shared/desktop/icon-cart.svg';
+import profileIcon from '../../public/assets/shared/desktop/user-solid.svg';
 import logo from '../../public/assets/shared/desktop/logo.svg';
 import hamburger from '../../public/assets/shared/tablet/icon-hamburger.svg';
 import styles from '../../styles/MainNavigation.module.scss';
@@ -111,6 +112,19 @@ function MainNavigation(props) {
           />
         </Link>
       </div>
+      <div className={styles.profile_icon_container}>
+        <Link href={'/admin/select'}>
+          <Image
+            src={profileIcon}
+            height={'58px'}
+            width={'58px'}
+            alt="logo"
+            priority={true}
+            className="logo"
+          />
+        </Link>
+      </div>
+
       <div className={styles.cart_container} onClick={() => setCart(!cart)}>
         <Image
           src={cartIcon}
