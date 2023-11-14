@@ -15,9 +15,9 @@
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(20,27,45);
+    background-color: $admin_dark;
     gap: 20px;
-
+ 
     & .back_site_btn {
         position: absolute;
         top: 0px;
@@ -25,24 +25,59 @@
         color: white;
     }
 
-    & div {
-        background-color: rgb(31,41,64);
-        color:white; 
+    & .admin_container, .customer_container {
+        background-color: $admin_medium;
+        box-shadow: 10px 15px 30px black;
+
+        color: white; 
         border-radius: 15px;
         display: flex;
         flex-direction: column;
-        padding: 20px;
-        gap: 10px;
+        padding-top: 30px;
 
-        & span {
-            color: rgb(220, 76, 32);
+        padding-left: 30px;
+        padding-right: 30px;
+
+        
+        gap: 5px;
+        width: 370px;
+        height: 550px;
+       
+        & button {
+            // display: flex;
+            // justify-content: center;
+            background-color: $admin_medium;
+            margin-top: 20px;
+            border: 2px solid $admin_light_blue;
+            border-radius: 15px;
+            // border-style: none;
+            box-shadow: 10px 15px 30px black;
+            width: 209px;
+            height: 40px;
+            color: white;
+            &:hover {
+                background-color: $admin_light_blue;
+            }
+            & p {
+                margin: 0px;
+            }
+        }
+
+
+        & span, .admin_guest_link {
+            margin-top: 20px;
+            color: $admin_light_blue;
+            &:hover {
+                color: $admin_red;
+                cursor: pointer;
+            }
         }
     }
 }
 
 .admin_container {
     background-color: rgb(31,41,64);
-    color:white;
+    // color:white;
     // display: flex;
     // align-items: center;
     // justify-content: center;

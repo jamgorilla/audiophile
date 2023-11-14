@@ -56,8 +56,10 @@ function Select() {
           <input type="text"></input>
           <p>Password</p>
           <input type="text"></input>
-          <button>Submit</button>
-          <Link href={'/admin/admin'}>
+          <button>
+            <p>Submit</p>
+          </button>
+          <Link className={styles.admin_guest_link} href={'/admin/admin'}>
             <span>Log in as Guest</span>
           </Link>
         </div>
@@ -88,7 +90,9 @@ function Select() {
             type="text"
             onChange={(e) => setNewPassword(e.target.value)}
           ></input>
-          <button onClick={onSubmitCustomer}>Submit</button>
+          <button onClick={onSubmitCustomer}>
+            <p>Submit</p>
+          </button>
           <span onClick={() => setLogin(!login)}>
             {login ? 'Register New Customer' : 'Login'}
           </span>

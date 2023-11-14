@@ -75,22 +75,23 @@ function Dashboard() {
 
   return (
     <div className={styles.main_page}>
+      <h3>Dashboard</h3>
       <div className={styles.boards_container}>
         <div className={styles.custom_total_board}>
-          <h5>Total Customers</h5>
-          <p>{customerList.length}</p>
+          <p>Total Customers</p>
+          <h3>{customerList.length}</h3>
         </div>
         <div className={styles.custom_total_board}>
-          <h5>Total Orders</h5>
-          <p>{orderQuantity}</p>
+          <p>Total Orders</p>
+          <h3>{orderQuantity}</h3>
         </div>
         <div className={styles.custom_total_board}>
-          <h5>Total Sales</h5>
-          <p>{salesTotal}</p>
+          <p>Total Sales</p>
+          <h3>{salesTotal}</h3>
         </div>
         <div className={styles.custom_total_board}>
-          <h5>Monthly users</h5>
-          <p>{}</p>
+          <p>Monthly users</p>
+          <h3>{}</h3>
         </div>
       </div>
     </div>

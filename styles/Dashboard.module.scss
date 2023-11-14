@@ -1,11 +1,20 @@
 @import './_variables.scss';
+@import './Admin.module.scss'; 
 
 .main_page {
+    // background-color: $admin_dark;
     & .boards_container {
         display: flex;
-        gap: 5px;
+        gap: 15px;
+        margin-top: 110px;
         & .custom_total_board {
-            background-color: rgb(31,41,64);
+            width: 350px;
+            background-color: $admin_medium;
+            box-shadow: 10px 15px 30px black;
+            border-radius: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+
             
         }
     }

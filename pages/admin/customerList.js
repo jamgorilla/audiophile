@@ -4,8 +4,24 @@ import styles from '../../styles/Admin.module.scss';
 import { db } from '../../firebase/firebase';
 import { getDocs, collection } from 'firebase/firestore';
 
+import LineChart from './LineChart';
+import { UserData } from './data';
+
 function CustomerList() {
   const [customerList, setCustomerList] = useState([]);
+
+  // testing chart.js with example data
+  const [userData, sertUserData] = useState({
+    labels: UserData.map((data) => data.year),
+    datasets: [
+      {
+        label: 'Total Customers',
+        data: UserData.map((data) => data.customers),
+        borderColor: '#649CCF',
+        tension: 0.4,
+      },
+    ],
+  });
 
   const customerCollectionRef = collection(db, 'customers');
 
@@ -32,6 +48,9 @@ function CustomerList() {
 
   return (
     <div className={styles.list_holder}>
+      <div className={styles.monthly_customers_chart_container}>
+        <LineChart chartData={userData} />
+      </div>
       <div className={styles.list_container}>
         <div className={styles.titleList}>
           <ul className={styles.titleRow}>
